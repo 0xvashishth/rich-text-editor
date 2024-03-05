@@ -2,32 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
+    padding-left: 20px;
+  }
+  blockquote {
+    background: #f9f9f9;
+    border-left: 3px solid #ccc;
+    /* margin: 1.0em 10px; */
+    color: #676565;
+    padding: 0.3em 10px;
+  }
+  h2, h1, h3 {
+    font-weight: revert;
+    font-size: revert;
+  }
+  a {
+    color: #68cef8;
+  }
+  blockquote p {
+    display: inline;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+pre {
+  background: #eae8e8;
+  font-family: 'JetBrainsMono', monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  /* Base styling for code */
+code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+
+/* Comments and quotes */
+.hljs-comment,
+.hljs-quote {
+  color: #616161;
+}
+
+/* Variables, attributes, tags, etc. */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #F98181; /* Reddish color */
+}
+
+/* Numbers, meta, built-in, literals, etc. */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #6f0c28; /* Orange color */
+}
+
+/* Strings, symbols, bullets */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #373eff; /* Blue color */
+}
+
+/* Titles and sections */
+.hljs-title,
+.hljs-section {
+  color: #FAF594; /* Yellow color */
+}
+
+/* Keywords and selector tags */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #70CFF8; /* Cyan color */
+}
+
+/* Emphasis and strong styling */
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+.ProseMirror p {
+  margin: 0;
+  display: inline-block;
+  min-width: 1px !important;
 }
