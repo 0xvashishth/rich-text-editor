@@ -43,6 +43,11 @@ const Tiptap = ({ onChange, content }: any) => {
   };
 
   const editor = useEditor({
+    editorProps: {
+      attributes: {
+        class: "Editor"
+      }
+    },
     extensions: [
       StarterKit.configure({
         codeBlock: false,
@@ -55,9 +60,14 @@ const Tiptap = ({ onChange, content }: any) => {
       Blockquote,
       Image.configure({
         allowBase64: true,
+        inline: true,
+        HTMLAttributes: {
+          // class: 'my-custom-class',
+        }
       }),
       TextAlign.configure({
         types: ['heading', 'paragraph'],
+
       }),
       Gapcursor,
       HorizontalRule,

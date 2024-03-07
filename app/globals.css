@@ -1,4 +1,4 @@
-@tailwind base;
+@tailwind base; 
 @tailwind components;
 @tailwind utilities;
 
@@ -11,7 +11,6 @@
   blockquote {
     background: #f9f9f9;
     border-left: 3px solid #ccc;
-    /* margin: 1.0em 10px; */
     color: #676565;
     padding: 0.3em 10px;
   }
@@ -33,7 +32,6 @@ pre {
   border-radius: 0.5rem;
 }
 
-  /* Base styling for code */
 code {
   color: inherit;
   padding: 0;
@@ -41,13 +39,11 @@ code {
   font-size: 0.8rem;
 }
 
-/* Comments and quotes */
 .hljs-comment,
 .hljs-quote {
   color: #616161;
 }
 
-/* Variables, attributes, tags, etc. */
 .hljs-variable,
 .hljs-template-variable,
 .hljs-attribute,
@@ -57,10 +53,9 @@ code {
 .hljs-link,
 .hljs-selector-id,
 .hljs-selector-class {
-  color: #F98181; /* Reddish color */
+  color: #F98181; 
 }
 
-/* Numbers, meta, built-in, literals, etc. */
 .hljs-number,
 .hljs-meta,
 .hljs-built_in,
@@ -81,7 +76,7 @@ code {
 /* Titles and sections */
 .hljs-title,
 .hljs-section {
-  color: #FAF594; /* Yellow color */
+  color: #280069; /* Yellow color */
 }
 
 /* Keywords and selector tags */
@@ -98,9 +93,9 @@ code {
 .hljs-strong {
   font-weight: 700;
 }
-
+/* 
 .ProseMirror p {
   margin: 0;
   display: inline-block;
   min-width: 1px !important;
-}
+} */
